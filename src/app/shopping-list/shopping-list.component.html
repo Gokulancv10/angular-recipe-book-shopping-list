@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<div class="row">
+  <div class="col-xs-12 p-0 mb-5">
+    <app-shopping-edit></app-shopping-edit>
+    <hr>
+    <h3>Ingredients</h3>
+    <ul class="list-group">
+      <a
+      class="list-group-item"
+      style="text-align: center;"
+      *ngIf="ingredients.length === 0"
+      >No Ingredients available.</a>
+      <a
+      class="list-group-item"
+      style="cursor: pointer;"
+      *ngFor="let ingredient of ingredients"
+      >{{ ingredient.name }} ({{ ingredient.amount }})
+    </a>
+    </ul>
+  </div>
+</div>
